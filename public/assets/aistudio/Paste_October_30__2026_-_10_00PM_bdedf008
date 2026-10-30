@@ -1,0 +1,1194 @@
+# PROJECT: SMART MEAL PLANNER — THE PERSONAL FAMILY COOKING ASSISTANT
+
+Build a complete, polished, intelligent, interactive, mobile-first web application that solves one of the most common everyday household problems:
+
+**"What should I cook today?"**
+
+This application is designed primarily for mothers and families who already know how to cook multiple dishes but struggle to decide what to prepare every day.
+
+The app should eliminate repetitive meal decisions, help families discover variety in their existing cooking knowledge, track their eating history, and make meal planning effortless.
+
+This is NOT a traditional recipe website.
+
+This is NOT a generic AI chatbot.
+
+This is a personalized cooking decision assistant that learns from the user's own cooking library and eating history.
+
+The application should feel like a premium, professionally designed consumer product that a real company could launch.
+
+---
+
+# 1. CORE PRODUCT PHILOSOPHY — MOST IMPORTANT RULE
+
+The entire application must revolve around the user's personal cooking library.
+
+Every user will create a personal library of dishes they already know how to prepare.
+
+For example:
+
+- Chicken Curry
+- Biryani
+- Daal
+- Fried Rice
+- Pasta
+- Karahi
+- Aloo Gosht
+- Pulao
+- Chicken Roast
+- Vegetable Rice
+- Kheer
+- Custard
+
+The application must only recommend dishes that exist in the user's library.
+
+**STRICT RULE: THE AI MUST NEVER INVENT, RANDOMLY INTRODUCE, OR RECOMMEND A DISH OUTSIDE THE USER'S LIBRARY IN NORMAL MEAL SELECTION.**
+
+The AI is a decision-maker, not a cooking instructor.
+
+The user is the expert cook. The AI simply helps decide what to cook.
+
+This rule applies to:
+
+1. Smart Pick.
+2. Random Wheel.
+3. Meal history.
+4. Weekly and monthly planning.
+5. Occasion Mode.
+6. All automatic recommendations.
+
+The only exception is the dedicated Try Something New feature, which can explore new recipes as described in Section 6. Even then, new recipes must not become eligible for normal recommendations until the user explicitly adds them to their personal library.
+
+If the library is empty, guide the user to add dishes instead of generating random recommendations.
+
+If a category has insufficient dishes, explain that clearly rather than inventing dishes to fill it.
+
+---
+
+# 2. APPLICATION DESIGN AND BRAND IDENTITY
+
+Create a beautiful, distinctive, modern, warm, premium interface.
+
+The application should feel welcoming to mothers and families, not like complicated business software.
+
+### Visual direction
+
+Use a combination of:
+
+- Warm cream backgrounds.
+- Soft sage green.
+- Muted olive.
+- Elegant terracotta accents.
+- Subtle warm orange.
+- Beautiful white or slightly warm cards.
+- Dark, readable typography.
+
+Use tasteful gradients, subtle shadows, rounded cards, beautiful illustrations, and smooth animations.
+
+Avoid:
+- Generic AI dashboard designs.
+- Excessive purple gradients.
+- Overly complicated layouts.
+- Too many buttons.
+- Tiny text.
+- Cluttered interfaces.
+- Excessive animations.
+
+### Typography
+
+Use a beautiful combination of:
+- A refined heading font.
+- A clean, highly readable body font.
+
+### Food imagery
+
+Use beautiful, realistic food photography wherever appropriate.
+
+Food images should look appetizing and professional, not artificial, blurry, pixelated, or cartoonish.
+
+Use different images for different dishes.
+
+### Responsive design
+
+The application must work beautifully on:
+- Android phones.
+- iPhones.
+- Tablets.
+- Laptops.
+- Desktop computers.
+
+Mobile should be the primary design priority because the main users will probably access the application from their phones while cooking.
+
+### Application identity
+
+Working name: **Aaj Kya Pakayen?**
+
+Create a memorable logo that combines a cooking-related symbol with a modern application identity.
+
+The name, colors, and branding should be easy to change later.
+
+---
+
+# 3. MAIN DASHBOARD
+
+The dashboard is the heart of the application.
+
+When a user opens the app, they should immediately understand what to do.
+
+### Dashboard layout
+
+At the top:
+
+- Personalized greeting.
+- Current date.
+- A friendly message.
+- Small profile/settings icon.
+- Today's cooking status.
+
+Example:
+
+"Good afternoon! What are we cooking today?"
+
+Below that, create a large, visually attractive central section:
+
+**WHAT SHOULD WE COOK TODAY?**
+
+Display four large interactive mode cards.
+
+Each card should have:
+- A unique illustration or icon.
+- A short explanation.
+- An attractive background.
+- A subtle hover/tap animation.
+- A clear action.
+
+The four modes:
+
+1. Smart Pick.
+2. Random Wheel.
+3. Try Something New.
+4. Occasion Mode.
+
+Each mode must open its own dedicated interface.
+
+Below the four modes, display:
+
+- Recently cooked dishes.
+- Today's selected meal, if any.
+- Quick access to the cooking library.
+- Upcoming meal plans.
+- Weekly food variety summary.
+- A small calendar preview.
+
+The dashboard should not overwhelm the user.
+
+Keep the most important actions immediately accessible.
+
+---
+
+# 4. MODE ONE — SMART PICK
+
+This is the most important feature in the application.
+
+The AI should intelligently select a dish from the user's personal cooking library.
+
+The user should not have to spend time thinking about what to prepare.
+
+They simply open Smart Pick and receive a thoughtful recommendation.
+
+### How Smart Pick works
+
+The AI must analyze:
+
+1. What the user cooked recently.
+2. What the user has not cooked for a while.
+3. How frequently each dish is cooked.
+4. The user's cooking library.
+5. Meal history.
+6. Previously selected preferences.
+7. Nutritional information when available.
+8. Variety of flavors.
+9. Available meal categories.
+10. User-defined dietary preferences.
+
+### Recommendation principles
+
+Avoid recommending the same dish repeatedly.
+
+For example:
+
+If the user cooked:
+- Monday: Chicken Curry.
+- Tuesday: Biryani.
+- Wednesday: Pasta.
+- Thursday: Daal.
+
+The system should consider those recent meals and recommend a suitable alternative from the library.
+
+It should intelligently balance:
+
+**Health:** Encourage variety and balanced eating based on available nutritional information.
+
+**Uniqueness:** Prefer dishes that have not been cooked recently.
+
+**Flavor variety:** Avoid repeatedly suggesting similar flavors or cooking styles.
+
+**History:** Consider the user's previous meals.
+
+**Frequency:** Avoid dishes that appear too frequently.
+
+**Practicality:** Prefer familiar dishes that the user can comfortably prepare.
+
+### Recommendation interface
+
+Display a beautiful recommendation card with:
+
+- Dish name.
+- Food image.
+- Category.
+- Last cooked date.
+- How often it has been cooked.
+- Why the AI selected it.
+- A short explanation of its variety or nutritional value, where supported.
+
+Example:
+
+"Today's Recommendation"
+
+Chicken Karahi
+
+"You're getting a break from rice-based meals, and you haven't prepared this dish recently. It also adds some variety to your recent meal history."
+
+Buttons:
+
+- Cook This Today.
+- Show Another Suggestion.
+- View Recipe (only if a recipe exists in the library).
+- Not in the mood.
+
+When the user selects Cook This Today, save it to the calendar and meal history.
+
+When they choose another suggestion, provide another eligible dish from the library.
+
+Do not repeatedly show the same rejected suggestion in the same recommendation session.
+
+### Important
+
+Smart Pick must NEVER recommend a dish outside the user's library.
+
+The AI should explain its reasoning in simple everyday language.
+
+Do not display complicated AI-generated analytical reports.
+
+---
+
+# 5. MODE TWO — RANDOM WHEEL SELECTOR
+
+Create a fun, interactive spinning wheel.
+
+This feature is for users who do not want an AI explanation and simply want the application to make a random choice.
+
+### Design
+
+The wheel should be visually beautiful, colorful, and smooth.
+
+Each segment represents a dish from the user's cooking library.
+
+The wheel must:
+
+- Dynamically populate from the user's library.
+- Display dish names clearly.
+- Support a large number of dishes.
+- Use distinct but harmonious segment colors.
+- Include a central Spin button.
+- Have smooth spinning animations.
+- Gradually slow down.
+- Stop on a clearly selected dish.
+
+Add a satisfying selection animation.
+
+### Result screen
+
+When the wheel stops:
+
+Display:
+
+"Today's dish has been selected!"
+
+Show:
+- Dish name.
+- Food image if available.
+- Category.
+- Last cooked date.
+
+Actions:
+
+- Cook This Today.
+- Spin Again.
+- View Recipe.
+
+### Rules
+
+The wheel must only contain dishes from the user's library.
+
+Never insert default sample dishes into a real user's wheel.
+
+Avoid recently cooked dishes if the user has enabled the Avoid Recent Meals setting.
+
+If the user has fewer than two eligible dishes, explain why the wheel cannot provide a meaningful random choice.
+
+---
+
+# 6. MODE THREE — TRY SOMETHING NEW
+
+This mode should help users explore new cooking ideas without losing the personalized nature of the application.
+
+The goal is to introduce variety rather than repeatedly preparing the same familiar dishes.
+
+### How it works
+
+Analyze the user's existing library and previous cooking history.
+
+Understand:
+- What kinds of food the user enjoys cooking.
+- Which flavors appear frequently.
+- Which ingredients appear in their existing recipes.
+- Which categories are underrepresented.
+- Which dishes they have never cooked.
+- What types of food they might enjoy exploring.
+
+### Two types of discovery
+
+**A. Discover an Uncooked Library Dish**
+
+Prioritize dishes that are already in the user's library but have never been prepared or recorded in the meal history.
+
+This is the safest way to discover something different while respecting the library-only rule.
+
+**B. Explore a New Recipe**
+
+The AI may suggest a genuinely new recipe based on the user's existing cooking preferences.
+
+However:
+
+- Clearly label it as a NEW RECIPE.
+- Explain why it matches the user's cooking interests.
+- Do not automatically add it to the library.
+- Do not add it to normal Smart Pick or Random Wheel recommendations.
+- Allow the user to review the recipe.
+- Allow the user to explicitly add it to their library.
+- Only after the user adds it should it become eligible for regular recommendations.
+
+### Example
+
+If the user's library contains:
+- Chicken Karahi.
+- Chicken Curry.
+- Biryani.
+- Pulao.
+- Fried Rice.
+
+The AI could identify an interest in chicken-based and rice-based cooking and suggest a new recipe with a similar flavor profile.
+
+Do not simply recommend unrelated international dishes.
+
+The user must remain in control.
+
+### Interface
+
+Create an attractive discovery experience.
+
+Display:
+
+- "Something different today?"
+- Suggested dish.
+- Why it matches their cooking style.
+- Whether it is already in their library or a genuinely new recipe.
+- A food image.
+- Optional recipe preview.
+
+Actions:
+
+- Add to My Library.
+- Explore Another.
+- Not Interested.
+- View Recipe.
+
+---
+
+# 7. MODE FOUR — OCCASION MODE
+
+This is a special feature for occasions when guests arrive or the family wants to prepare a more complete meal.
+
+The user opens Occasion Mode and receives a coordinated menu.
+
+### Main interface
+
+Display:
+
+"Guests Coming Over?"
+
+"What kind of occasion are you preparing for?"
+
+Allow the user to select:
+
+- Family gathering.
+- Guests visiting.
+- Birthday.
+- Eid.
+- Dinner party.
+- Special family dinner.
+- Casual get-together.
+- Custom occasion.
+
+Allow optional customization:
+
+- Number of guests.
+- Meal type: Lunch or Dinner.
+- Preferred food style.
+- Available preparation time.
+- Special dietary preferences.
+
+### The four required menu categories
+
+The AI must create a menu consisting of exactly four categories:
+
+**1. Main Course**
+
+The main dish or dishes selected from the user's library.
+
+**2. Side Dish**
+
+Suitable side dishes selected from the user's library.
+
+**3. Dessert**
+
+Desserts selected from the user's library.
+
+**4. Drinks**
+
+Drinks selected from the user's library.
+
+### Example
+
+Suppose the user's library contains:
+
+Main courses:
+- Chicken Biryani.
+- Chicken Karahi.
+- Beef Pulao.
+
+Side dishes:
+- Raita.
+- Salad.
+- Fries.
+
+Desserts:
+- Kheer.
+- Custard.
+- Fruit Trifle.
+
+Drinks:
+- Lemonade.
+- Fresh Juice.
+- Mint Drink.
+
+The AI could generate:
+
+MAIN COURSE:
+Chicken Biryani.
+
+SIDE DISH:
+Fresh Salad and Raita.
+
+DESSERT:
+Fruit Trifle.
+
+DRINK:
+Homemade Lemonade.
+
+### Intelligent combinations
+
+The AI should consider:
+
+- Flavor compatibility.
+- Meal balance.
+- Occasion type.
+- Number of guests.
+- Preparation complexity.
+- Variety.
+- Previous menus.
+
+Avoid selecting dishes that clash with one another.
+
+Avoid selecting too many heavy dishes together.
+
+### Strict category rule
+
+Only select dishes from the corresponding categories in the user's library.
+
+For example, do not select a dessert as a main course.
+
+If a category is empty, display:
+
+"You haven't added any drinks to your library yet."
+
+Provide a direct Add to Library action.
+
+Never fabricate a missing category or fill it with an external recipe.
+
+### Result interface
+
+Create a beautiful four-section menu presentation.
+
+Each section should have:
+- Food image.
+- Dish name.
+- Category.
+- Short description if available.
+- Preparation time if provided.
+
+Actions:
+
+- Change Main Course.
+- Change Side Dish.
+- Change Dessert.
+- Change Drink.
+- Generate Another Menu.
+- Save This Occasion Menu.
+- Add to Calendar.
+
+Changing one category should not unnecessarily regenerate the entire menu.
+
+---
+
+# 8. PERSONAL COOKING LIBRARY
+
+This is the foundation of the entire application.
+
+Create a dedicated Library page where users can add, edit, organize, search, and remove dishes.
+
+### Adding a dish
+
+Provide a simple Add Dish button.
+
+When selected, open a clean form.
+
+Fields:
+
+1. Dish Name — required.
+2. Food Category — required.
+3. Recipe — optional.
+4. Ingredients — optional.
+5. Preparation Time — optional.
+6. Food Image — optional.
+7. Personal Notes — optional.
+
+### Categories
+
+Provide these default categories:
+
+- Main Course.
+- Rice Dishes.
+- Curry and Gravy.
+- Vegetables.
+- Lentils.
+- Breakfast.
+- Snacks.
+- Side Dishes.
+- Salads.
+- Desserts.
+- Drinks.
+- Other.
+
+Allow users to create their own categories.
+
+### Recipe field
+
+The recipe must be OPTIONAL.
+
+A user may simply add:
+
+"Chicken Karahi"
+
+without providing a recipe.
+
+The application must still be able to recommend Chicken Karahi.
+
+Never force users to enter ingredients or recipes.
+
+### Library functionality
+
+Include:
+
+- Search.
+- Category filters.
+- Alphabetical sorting.
+- Recently added.
+- Most frequently cooked.
+- Least recently cooked.
+- Favorites.
+- Edit dish.
+- Delete dish.
+- Upload or change food image.
+
+Every dish should have a clean visual card.
+
+### Important data distinction
+
+A dish in the library means:
+
+"I know how to cook this."
+
+A dish in the meal history means:
+
+"I actually cooked and ate this."
+
+Adding a dish to the library must NEVER automatically add it to the meal history.
+
+Keep these two systems completely separate.
+
+---
+
+# 9. CALENDAR AND FOOD HISTORY
+
+Build a beautiful interactive food calendar.
+
+This is where users can see what their family has eaten over time.
+
+The calendar should support:
+
+- Daily view.
+- Weekly view.
+- Monthly view.
+
+### Monthly calendar
+
+Display a traditional calendar grid.
+
+Each date should visually indicate whether a meal was recorded.
+
+Use small food thumbnails, category icons, or subtle indicators.
+
+When a user clicks a date, open its meal details.
+
+### Daily meal history
+
+Allow the user to record:
+
+- Breakfast.
+- Lunch.
+- Dinner.
+- Snacks.
+
+Allow multiple dishes per meal.
+
+Example:
+
+Monday:
+- Breakfast: Omelette.
+- Lunch: Chicken Curry.
+- Dinner: Daal and Rice.
+
+Tuesday:
+- Breakfast: Paratha.
+- Lunch: Biryani.
+- Dinner: Pasta.
+
+### Meal recording
+
+When the user confirms that a dish was actually cooked, save it to meal history.
+
+Provide options:
+
+- Cooked Today.
+- Add to a Previous Date.
+- Edit Entry.
+- Remove Entry.
+
+Do not confuse a planned meal with a completed meal.
+
+A planned meal should have a different status from an actually cooked meal.
+
+### Weekly and monthly navigation
+
+Users must be able to move backward and forward through their food history.
+
+The calendar should remain easy to understand, especially for users who are not technically experienced.
+
+---
+
+# 10. WEEKLY AND MONTHLY NUTRITION REPORTS
+
+Create a dedicated Nutrition and Eating Habits section.
+
+This feature should help users understand the general nutritional patterns of their family's meals.
+
+It must be informative, friendly, and easy to understand.
+
+### Weekly report
+
+At the end of each week, generate a report showing:
+
+- Number of meals recorded.
+- Most frequently cooked dishes.
+- Least frequently cooked dishes.
+- Variety of food.
+- Main food categories consumed.
+- Repeated meals.
+- Fruit and vegetable presence when recorded.
+- Protein-rich meal presence when identifiable.
+- General nutritional balance.
+- Suggestions for improving variety.
+
+### Monthly report
+
+Provide a larger overview:
+
+- Meals cooked throughout the month.
+- Most frequently prepared dishes.
+- Changes in food variety.
+- Frequently repeated meals.
+- Distribution of meal categories.
+- General eating patterns.
+- Suggestions for the following month.
+
+### Health analysis
+
+The AI should evaluate available recipe ingredients and nutritional information when provided.
+
+It can identify general patterns relating to:
+
+- Protein.
+- Carbohydrates.
+- Fiber.
+- Vegetables.
+- Fruits.
+- Added sugar.
+- Sodium.
+- Fats.
+
+However, do not invent nutritional values.
+
+If the user has not provided ingredients, quantities, or portion sizes, explain that the nutritional analysis is approximate or unavailable.
+
+Never claim that a particular meal will cause or prevent a disease.
+
+Never provide medical diagnoses.
+
+Never label a person's diet as unhealthy based on incomplete information.
+
+### Report presentation
+
+Use attractive visualizations:
+
+- Food category distribution.
+- Meal frequency chart.
+- Weekly variety chart.
+- Cooking frequency chart.
+- Simple nutritional indicators.
+
+Add friendly observations.
+
+Example:
+
+"Your family enjoyed a good variety of meals this week. Rice-based dishes appeared frequently, while vegetables were recorded less often. Consider including some of your vegetable dishes next week."
+
+Make recommendations practical and positive.
+
+### Important
+
+Reports must be based on actual recorded meals, not planned meals or library entries.
+
+If there is insufficient history, show an encouraging message explaining that more meal records are needed.
+
+---
+
+# 11. AI PERSONALIZATION AND MEMORY
+
+Build a proper personalized recommendation engine.
+
+The AI should learn from the user's cooking patterns over time.
+
+### Data it should remember
+
+- Personal cooking library.
+- Recipe information.
+- Meal history.
+- Frequently cooked dishes.
+- Recently cooked dishes.
+- Favorite dishes.
+- Rejected recommendations.
+- Occasion menus.
+- User preferences.
+- Dietary preferences.
+- Cooking habits.
+
+### Learning behavior
+
+If the user repeatedly rejects a particular dish, reduce its recommendation priority.
+
+If the user frequently selects a particular category, recognize that preference.
+
+If the user has not prepared a particular dish for a long time, consider recommending it.
+
+If the user frequently eats similar meals, encourage variety.
+
+The AI should become more useful as the user continues using the application.
+
+### Explainable AI
+
+Every recommendation should have a short explanation.
+
+Avoid generic explanations like:
+
+"AI selected this dish for you."
+
+Instead:
+
+"You haven't prepared this dish in 12 days, and it adds variety to your recent meals."
+
+Only use explanations supported by actual user data.
+
+### AI restrictions
+
+The AI must never:
+
+- Ignore the user's library.
+- Invent cooking history.
+- Invent recipes that were never provided.
+- Pretend the user cooked something they did not.
+- Automatically change library entries.
+- Automatically add new dishes.
+- Generate fake nutritional statistics.
+
+AI suggestions must always be distinguishable from actual saved information.
+
+---
+
+# 12. SETTINGS AND PERSONALIZATION
+
+Create a simple settings page.
+
+Include:
+
+- User name.
+- Profile picture.
+- Preferred language.
+- Theme selection.
+- Dietary preferences.
+- Food allergies.
+- Foods the user dislikes.
+- Meal frequency preferences.
+- Avoid recently cooked meals.
+- Recommendation variety level.
+- Notification preferences.
+- Data export.
+- Account management.
+
+Provide language support designed to accommodate families in Pakistan.
+
+Initially support:
+
+- English.
+- Urdu.
+
+Structure the interface so additional languages can be added later.
+
+The application should not assume every family has the same dietary preferences.
+
+---
+
+# 13. USER EXPERIENCE — MAKE IT EXTREMELY EASY
+
+The target user may not be particularly comfortable with technology.
+
+Therefore:
+
+- Use clear everyday language.
+- Keep navigation obvious.
+- Make buttons large enough to tap.
+- Avoid complicated settings.
+- Use familiar icons.
+- Provide helpful empty states.
+- Make important actions require as few steps as possible.
+
+### Suggested navigation
+
+Desktop sidebar:
+
+1. Home.
+2. My Library.
+3. Calendar.
+4. Reports.
+5. Settings.
+
+Mobile bottom navigation:
+
+1. Home.
+2. Library.
+3. Calendar.
+4. Reports.
+5. Settings.
+
+The four cooking modes should be prominently accessible from Home.
+
+### Interactions
+
+Implement:
+
+- Smooth page transitions.
+- Interactive recommendation cards.
+- Animated spinning wheel.
+- Calendar interactions.
+- Expandable food details.
+- Search and filtering.
+- Toast notifications.
+- Confirmation dialogs.
+- Loading states.
+- Error states.
+- Helpful empty states.
+
+All controls must actually work.
+
+Do not create decorative buttons that do nothing.
+
+---
+
+# 14. TECHNICAL IMPLEMENTATION
+
+Build a real, functional application.
+
+Do not create just a static visual prototype.
+
+### Recommended technology
+
+Use:
+
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Modern reusable UI components.
+- Supabase for authentication and database.
+- A secure AI integration for intelligent recommendations.
+- A suitable image storage solution.
+
+### Database architecture
+
+Create proper database tables for:
+
+1. Users.
+2. Cooking library.
+3. Categories.
+4. Recipes.
+5. Meal history.
+6. Planned meals.
+7. Favorites.
+8. User preferences.
+9. Occasion menus.
+10. Nutrition information.
+
+Use proper relationships between records.
+
+Every user's private data must remain private.
+
+Implement row-level security.
+
+A user must never be able to access another user's personal cooking library or meal history.
+
+### AI integration
+
+Use an actual AI integration for personalized recommendations and new recipe discovery.
+
+Keep API keys secure on the server.
+
+Never expose secret API keys in frontend code.
+
+Do not pretend an AI feature works if it is not connected.
+
+If an AI service is unavailable, provide a sensible local fallback for library-only selection.
+
+The fallback must still obey all library restrictions.
+
+### Recommendation engine
+
+The recommendation engine should use structured user data.
+
+Do not send only a vague prompt to an AI model and trust it to remember everything.
+
+Retrieve the actual library and history from the database, then provide the relevant information to the AI.
+
+Validate every recommended dish against the user's actual library before displaying it.
+
+If a returned dish does not match an existing library record, reject it.
+
+For normal selection modes, the application itself must enforce the library-only restriction, not merely rely on the AI behaving correctly.
+
+### Performance
+
+The application should load quickly.
+
+Avoid unnecessarily large libraries and excessive animations.
+
+Optimize food images.
+
+Use lazy loading.
+
+Keep the mobile experience smooth.
+
+---
+
+# 15. FIRST-TIME USER EXPERIENCE
+
+When someone opens the application for the first time, do not immediately show an empty dashboard.
+
+Create a beautiful onboarding process.
+
+### Step 1: Welcome
+
+"Welcome to your personal cooking assistant!"
+
+Explain that the application helps decide what to cook using the dishes the user already knows.
+
+### Step 2: Add dishes
+
+Encourage users to add their first dishes.
+
+Allow them to add several dishes quickly.
+
+Provide an easy category selection.
+
+### Step 3: Preferences
+
+Ask optional questions about:
+
+- Preferred foods.
+- Dietary preferences.
+- Foods they dislike.
+- Meal planning preferences.
+
+### Step 4: Ready
+
+Show:
+
+"Your cooking library is ready!"
+
+Take them to their personalized dashboard.
+
+The application should work even if they skip optional information.
+
+---
+
+# 16. SAMPLE DATA AND DEMONSTRATION MODE
+
+Create an optional demonstration mode for first-time visitors or presentations.
+
+Populate it with a realistic fictional family cooking library.
+
+Include sample dishes across multiple categories.
+
+Include realistic sample meal history for the previous week and month.
+
+Show how:
+
+- Smart Pick works.
+- The wheel works.
+- Try Something New works.
+- Occasion Mode generates menus.
+- The calendar displays history.
+- Weekly reports are generated.
+
+Clearly label all demonstration information as sample data.
+
+Never mix sample data with a real user's personal information.
+
+Allow users to remove demonstration data and start with their own library.
+
+---
+
+# 17. FINAL QUALITY REQUIREMENTS
+
+This application must feel like a complete, premium product.
+
+Prioritize the following:
+
+**DESIGN QUALITY**
+
+- Exceptional visual consistency.
+- Beautiful food imagery.
+- Thoughtful color combinations.
+- Premium typography.
+- Clean layouts.
+- Attractive cards.
+- Excellent mobile responsiveness.
+
+**FUNCTIONAL QUALITY**
+
+- Working navigation.
+- Functional library management.
+- Real meal history.
+- Proper calendar.
+- Working spinning wheel.
+- Real recommendation logic.
+- Functional occasion menus.
+- Actual weekly and monthly reports.
+- Persistent user data.
+
+**AI QUALITY**
+
+- Personalized recommendations.
+- Library-only enforcement.
+- History-aware selection.
+- Explainable recommendations.
+- Honest nutritional analysis.
+- Safe new recipe discovery.
+
+**USER EXPERIENCE**
+
+- Extremely simple.
+- Friendly.
+- Fast.
+- Accessible.
+- Easy to understand.
+- Suitable for everyday family use.
+
+---
+
+# 18. DEVELOPMENT INSTRUCTIONS — IMPORTANT
+
+Do not sacrifice functionality for appearance.
+
+Do not sacrifice appearance for functionality.
+
+Build both together.
+
+Start by creating the complete application structure, navigation, visual identity, and database architecture.
+
+Then implement each of the four modes and connect them to the personal cooking library.
+
+Test the entire application using demonstration data.
+
+Verify that the strict library-only rule is enforced across every normal recommendation pathway.
+
+Test that calendar entries, planned meals, and completed meals remain separate.
+
+Test that the AI cannot introduce an outside dish into Smart Pick, Random Wheel, or Occasion Mode.
+
+Test that all four Occasion Mode categories respect their corresponding library categories.
+
+Test that nutritional reports never invent data.
+
+Fix broken interactions, inconsistent layouts, and mobile responsiveness issues.
+
+Do not leave placeholder buttons, fake AI responses, or unfinished pages.
+
+If a service requires credentials, build the proper integration and clearly explain which credentials are needed rather than pretending it is connected.
+
+**FINAL PRODUCT VISION:**
+
+Create an application that makes a mother open her phone, spend a few seconds choosing a mode, and immediately know what to cook.
+
+It should feel less like using software and more like having a thoughtful personal cooking assistant who knows the family's cooking habits.
+
+The application should save time, reduce daily decision fatigue, encourage variety, make meal history meaningful, and make cooking decisions enjoyable.
+
+Build something genuinely useful that families would want to use every single day.

@@ -1,0 +1,6 @@
+{
+  "name": "Aaj Kya Pakayen? — Smart Family Meal Planner",
+  "description": "The personal family cooking decision assistant that solves 'What should I cook today?' using only your household's cooking library and eating history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
